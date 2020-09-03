@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="heS-ww-td0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hzV-QZ-qfn">
+            <objects>
+                <navigationController id="heS-ww-td0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X2d-iu-bcr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="N4q-zM-TYV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ux5-34-GdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-707" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoadingButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-2J-9yq" customClass="LoadingButton" customModule="LoadingButton" customModuleProvider="target">
+                                <rect key="frame" x="87" y="433" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="QJa-JP-bCE"/>
+                                </constraints>
+                                <state key="normal" title="Button2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OC-78-WnW" customClass="LoadingButton" customModule="LoadingButton" customModuleProvider="target">
+                                <rect key="frame" x="87" y="511" width="240" height="30"/>
+                                <state key="normal" title="Button3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sog-Iz-uAl" customClass="LoadingButton" customModule="LoadingButton" customModuleProvider="target">
+                                <rect key="frame" x="87" y="355" width="240" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FCr-2J-9yq" firstAttribute="centerX" secondItem="Sog-Iz-uAl" secondAttribute="centerX" id="BuA-38-CTS"/>
+                            <constraint firstItem="FCr-2J-9yq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IP8-Si-v7W"/>
+                            <constraint firstItem="0OC-78-WnW" firstAttribute="centerX" secondItem="Sog-Iz-uAl" secondAttribute="centerX" id="eik-K1-T2E"/>
+                            <constraint firstItem="FCr-2J-9yq" firstAttribute="top" secondItem="Sog-Iz-uAl" secondAttribute="bottom" constant="48" id="lvE-SG-YKX"/>
+                            <constraint firstItem="0OC-78-WnW" firstAttribute="top" secondItem="FCr-2J-9yq" secondAttribute="bottom" constant="48" id="m3o-0u-yjB"/>
+                            <constraint firstItem="FCr-2J-9yq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nU3-XE-al7"/>
+                            <constraint firstItem="FCr-2J-9yq" firstAttribute="width" secondItem="Sog-Iz-uAl" secondAttribute="width" id="p1c-gn-FzY"/>
+                            <constraint firstItem="0OC-78-WnW" firstAttribute="width" secondItem="Sog-Iz-uAl" secondAttribute="width" id="x0j-3U-iaR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="585-4f-ccI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="yoA-ja-aJa">
+                            <connections>
+                                <action selector="didTapRightBarButton:" destination="BYZ-38-t0r" id="jIX-Sy-EPU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="button1" destination="Sog-Iz-uAl" id="F3r-BT-gFp"/>
+                        <outlet property="button2" destination="FCr-2J-9yq" id="RbH-Th-Epi"/>
+                        <outlet property="button3" destination="0OC-78-WnW" id="bV4-Xq-nm2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+</document>
